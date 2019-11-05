@@ -1,9 +1,5 @@
 <?php
 //Список високосных годов v3
-function listYears($startingYear, $endYear, $step = 4)
-{
-    echo implode(', ', range($startingYear, $endYear, $step));
-}
 
 function is_leap_year($year) {
    return ((($year % 4) == 0) && ((($year % 100) != 0) || (($year % 400) == 0)));
