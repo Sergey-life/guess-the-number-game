@@ -2,12 +2,18 @@
 //Список високосных годов v3
 
 function is_leap_year($year) {
-   return ((($year % 4) == 0) && ((($year % 100) != 0) || (($year % 400) == 0)));
+   if ($year % 400 == 0 && $year % 100 != 0 || $year % 4 == 0) {
+//        return print_r(true);
+        echo 'Высокосный год!';
+    } else {
+//        return print_r(false);
+        echo 'Не высокостный год!';
+    }
 }
 
 if (!empty($_POST['startingYear'])) {
     $startingYear = $_POST['startingYear'];
-    var_dump(is_leap_year($startingYear));
+    is_leap_year($startingYear);
 }
 
 ?>
