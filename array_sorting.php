@@ -1,4 +1,5 @@
 <?php
+error_reporting(E_ALL);
 $lineCount = readline('Введите количество людей: ');
 for ($i = 1; $i <= $lineCount; $i++) {
     if (!empty($lineCount)) {
@@ -7,7 +8,8 @@ for ($i = 1; $i <= $lineCount; $i++) {
     $users[] = $lineUsers;
 }
 sort($users);
-foreach ($users as $key => $user) {
-    $key++;
-    echo '> Пользователь ' . $key . ':' . $user . "\n";
+$a = 0;
+foreach ($users as $user) {
+    $a++;
+    echo '> Пользователь ' . $a . ':' . $user . "\n";
 }
