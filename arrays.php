@@ -1,15 +1,15 @@
 <?php
-
+error_reporting(E_ALL);
 $limit = readline("Enter limit:  ");
 $sequence = generate_fib_sequence($limit);
-//show_seqence($sequence);
+//show_sequence($sequence);
 
 function generate_fib_sequence($limit)
 {
     $a = 1;
     $b = 0;
     $i = 1;
-    echo "> Position 1: 11\n";
+    echo "> Position 1: 1\n";
 
     while (true){
 
@@ -19,7 +19,6 @@ function generate_fib_sequence($limit)
         }
         $i++;
         echo '> Position ' . $i . ': ' . $array[] = $v . "\n";
-
         $b = $a;
         $a = $v;
     }
@@ -29,7 +28,7 @@ function generate_fib_sequence($limit)
 //    $b = 1;
 }
 
-//function show_seqence($sequence)
-//{
-////   echo $sequence;
-//}
+function show_sequence($sequence)
+{
+
+}
