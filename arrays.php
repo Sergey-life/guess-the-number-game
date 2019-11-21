@@ -6,8 +6,8 @@ show_sequence($sequence);
 
 function generate_fib_sequence($limit)
 {
-    $a = 1;
-    $b = 0;
+    $a = 0;
+    $b = 1;
 
     while (true){
 
@@ -16,8 +16,8 @@ function generate_fib_sequence($limit)
             break;
         }
         $array[] = $v;
-        $b = $a;
-        $a = $v;
+        $a = $b;
+        $b = $v;
     }
 
     return $array;

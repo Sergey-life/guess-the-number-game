@@ -1,9 +1,9 @@
 <?php
 
 $line = readline('Введите число: ');
-$a = 1;
-$b = 0;
-echo $b . ", " . $a . ", ";
+$a = 0;
+$b = 1;
+echo $a . ", " . $b . ", ";
 while (true) {
     $v = $a + $b;
     if ($v >= $line) {
@@ -11,6 +11,6 @@ while (true) {
     }
     echo $v . ", ";
 
-    $b = $a;
-    $a = $v;
+    $a = $b;
+    $b = $v;
 }
