@@ -2,14 +2,12 @@
 error_reporting(E_ALL);
 $limit = readline("Enter limit:  ");
 $sequence = generate_fib_sequence($limit);
-//show_sequence($sequence);
+show_sequence($sequence);
 
 function generate_fib_sequence($limit)
 {
     $a = 1;
     $b = 0;
-    $i = 1;
-    echo "> Position 1: 1\n";
 
     while (true){
 
@@ -17,18 +15,20 @@ function generate_fib_sequence($limit)
         if ($v >= $limit) {
             break;
         }
-        $i++;
-        echo '> Position ' . $i . ': ' . $array[] = $v . "\n";
+        $array[] = $v;
         $b = $a;
         $a = $v;
     }
 
-//    $array = [];
-//    $a = 0;
-//    $b = 1;
+    return $array;
 }
 
-function show_sequence($sequence)
+function show_sequence($sequence, $i = 1)
 {
+     echo "> Position 1: 1\n";
+ foreach ($sequence as $value) {
+     $i++;
+     echo "> Position $i: " . $value . "\n";
+ }
 
 }
